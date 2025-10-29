@@ -424,5 +424,41 @@ textarea {
   overflow-y: auto;           /* allow vertical scroll */
   max-height: calc(100vh - 100px);/* full height minus header */
 }
+ .popup {
+    width: 80%;           /* ✅ Even wider on mobile */
+    padding: 24px;        /* ✅ More touch-friendly padding */
+    margin: 20px;         /* ✅ Breathing room */
+  }
+  
+  .popup h3 {
+    font-size: 24px;      /* ✅ Larger title */
+    margin-bottom: 20px;
+  }
+  
+  .color-options {
+    justify-content: center;  /* ✅ Center color picker */
+    padding: 5px 0;
+  }
+  
+  .color-option {
+    width: 20px;          /* ✅ Larger touch targets */
+    height: 20px;
+  }
+  .popup button:disabled {
+  background:#001F8B;
+  cursor: not-allowed;
+}
+.popup button {
+  width: 30%;
+  padding: 7px;
+  background: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-left: 200px;
 
+}
 }
