@@ -1,4 +1,4 @@
-// src/components/AddGroupPopup.js
+
 import React, { useState, forwardRef } from 'react';
 
 const COLORS = ['#B38BFA', '#FF79F2', '#43E6FC', '#F19576', '#0047FF', '#6691FF'];
@@ -9,7 +9,7 @@ const AddGroupPopup = forwardRef(({ onAddGroup }, ref) => {
 
   const handleCreate = () => {
     if (groupName.length < 2) return;
-    if (groupName.length > 20) return; // Basic length limit
+    if (groupName.length > 20) return; 
     onAddGroup({ name: groupName, color: selectedColor });
     setGroupName('');
   };

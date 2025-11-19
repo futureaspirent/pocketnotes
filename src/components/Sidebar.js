@@ -6,13 +6,13 @@ const Sidebar = ({ groups, currentGroupId, setCurrentGroupId, setShowAddGroup, i
     <aside className="sidebar">
       <div className="sidebar-header">
         <h1>Pocket Notes</h1>
-        {/* Show button on desktop always, mobile handled in Home.jsx */}
+        
         {!isMobile && (
           <button onClick={() => setShowAddGroup(true)}>+</button>
         )}
       </div>
 
-      {/* Groups List with auto-scroll */}
+    
       <nav className="groups-list">
         {groups.map((group) => (
           <button

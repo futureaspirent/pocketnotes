@@ -10,20 +10,20 @@ const Home = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const popupRef = useRef(null);
 
-  // Update isMobile on window resize
+  
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Load groups from localStorage
+  
   useEffect(() => {
     const savedGroups = localStorage.getItem('groups');
     if (savedGroups) setGroups(JSON.parse(savedGroups));
   }, []);
 
-  // Handle adding a new group
+  
   const handleAddGroup = (newGroupData) => {
     const { name, color } = newGroupData;
     if (name.length < 2 || groups.some(g => g.name.toLowerCase() === name.toLowerCase())) return;
@@ -35,10 +35,10 @@ const Home = () => {
     setShowAddGroup(false);
   };
 
-  // Go back to sidebar on mobile
+  
   const goBackToSidebar = () => setCurrentGroupId(null);
 
-  // Show welcome screen if no groups and no group selected
+  
   if (!currentGroupId && groups.length === 0) {
     return (
       <div className="welcome-screen">
@@ -55,7 +55,7 @@ const Home = () => {
           <p className="encryption-note">end-to-end encrypted</p>
         </div>
 
-        {/* Mobile-only Add Group Button */}
+        
         {isMobile && (
           <button
             className="sidebar-header-button"
@@ -65,7 +65,7 @@ const Home = () => {
           </button>
         )}
 
-        {/* Add Group Popup */}
+        
         {showAddGroup && <AddGroupPopup onAddGroup={handleAddGroup} ref={popupRef} />}
       </div>
     );
@@ -73,7 +73,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      {/* Sidebar */}
+      
       {(!isMobile || !currentGroupId) && (
         <Sidebar
           groups={groups}
@@ -83,7 +83,7 @@ const Home = () => {
         />
       )}
 
-      {/* Notes Section */}
+      
       {(!isMobile || currentGroupId) && (
         <NotesSection
           currentGroupId={currentGroupId}
@@ -92,7 +92,7 @@ const Home = () => {
         />
       )}
 
-      {/* Mobile-only Add Group Button */}
+      
       {isMobile && !currentGroupId && (
         <button
           className="sidebar-header-button"
@@ -102,7 +102,7 @@ const Home = () => {
         </button>
       )}
 
-      {/* Add Group Popup */}
+      
       {showAddGroup && <AddGroupPopup onAddGroup={handleAddGroup} ref={popupRef} />}
     </div>
   );

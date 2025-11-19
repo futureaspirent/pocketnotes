@@ -1,4 +1,3 @@
-// src/utils/helpers.js
 
 export const generateInitials = (name) => {
   const words = name.split(' ');

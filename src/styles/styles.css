@@ -1,4 +1,4 @@
-/* src/styles/styles.css */
+
 
 .app {
   height: 100vh;
@@ -29,20 +29,17 @@
 }
 
 .illustration {
-  width: 60%;          /* image takes 50% of parent container */
-  max-width:600px;    /* limit max size on large screens */
-  height: auto;        /* maintain aspect ratio */
+  width: 60%;          
+  max-width:600px;    
+  height: auto;        
   display: block;
   margin-top: 40px; 
   margin-left: auto;
   margin-right: auto; 
-  margin-bottom:0 ;/* center image with top/bottom spacing */
+  margin-bottom:0 ;
 }
 
 
-/* .welcome-screen button:hover {
-
-} */
 .home-container {
   display: flex;
   height: 100vh;
@@ -91,8 +88,8 @@
   overflow-y: auto;
   max-height: calc(100vh - 100px);
   width: 100%;
-  scrollbar-width:none;         /* for Firefox */
-  scrollbar-color:  #E0E0E0;   /* thumb and track colors */
+  scrollbar-width:none;         
+  scrollbar-color:  #E0E0E0;   
 }
 
 .group-item {
@@ -165,7 +162,7 @@
   color: black;
   font-weight: 500;
   margin-top: 5px;
-  margin-right: 0; /* remove extra margin */
+  margin-right: 0; 
   text-align: right;
 }
 .note-meta span {
@@ -314,7 +311,6 @@ textarea {
   cursor: not-allowed;
 }
 
-/* Responsive Mobile Design (max-width: 768px) */
 @media (max-width: 768px) {
   .home-container {
     flex-direction: column;
@@ -361,7 +357,7 @@ textarea {
     font-weight: 700;
   }
 
-  /* Sticky + button on bottom right */
+  
 
   .notes-section {
     height: 100vh;
@@ -419,29 +415,29 @@ textarea {
   font-size: 18px;
   color: white;
 }
-.groups-list {           /* remove bullets */
-  padding: 0;                 /* no padding inside the list */                /* remove default margin */
-  overflow-y: auto;           /* allow vertical scroll */
-  max-height: calc(100vh - 100px);/* full height minus header */
+.groups-list {           
+  padding: 0;                               
+  overflow-y: auto;           
+  max-height: calc(100vh - 100px);
 }
  .popup {
-    width: 80%;           /* ✅ Even wider on mobile */
-    padding: 24px;        /* ✅ More touch-friendly padding */
-    margin: 20px;         /* ✅ Breathing room */
+    width: 80%;           
+    padding: 24px;        
+    margin: 20px;         
   }
   
   .popup h3 {
-    font-size: 24px;      /* ✅ Larger title */
+    font-size: 24px;      
     margin-bottom: 20px;
   }
   
   .color-options {
-    justify-content: center;  /* ✅ Center color picker */
+    justify-content: center;  
     padding: 5px 0;
   }
   
   .color-option {
-    width: 20px;          /* ✅ Larger touch targets */
+    width: 20px;          
     height: 20px;
   }
   .popup button:disabled {
