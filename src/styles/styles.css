@@ -125,6 +125,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  background-color: #4A90E2;
 }
 
 .notes-section header {
@@ -203,7 +204,6 @@ textarea {
 
 .send-button.active {
   color: #054b9bc0;
-  /* color: white; */
 }
 
 .send-button:disabled {
@@ -215,6 +215,8 @@ textarea {
   text-align: center;
   padding: 40px;
   background: #f9f9f9;
+  background: #DAE5F5;
+
 }
 
 .empty h2 {
@@ -361,9 +363,6 @@ textarea {
     bottom: 20px;
     display: inline-block;
   }
-
- 
-  
 
   .notes-section {
     height: 100vh;
