@@ -39,37 +39,6 @@ const Home = () => {
   const goBackToSidebar = () => setCurrentGroupId(null);
 
   
-  if (!currentGroupId && groups.length === 0) {
-    return (
-      <div className="welcome-screen">
-        <div className="welcome-content">
-          <img
-            src={img}
-            alt="Pocket Notes Illustration"
-            className="welcome-illustration"
-          />
-          <h2>Pocket Notes</h2>
-          <p>
-            Send and receive messages without keeping your phone online. Use Pocket Notes on up to 4 linked devices and 1 mobile phone.
-          </p>
-          <p className="encryption-note">end-to-end encrypted</p>
-        </div>
-
-        
-        {isMobile && (
-          <button
-            className="sidebar-header-button"
-            onClick={() => setShowAddGroup(true)}
-          >
-            +
-          </button>
-        )}
-
-        
-        {showAddGroup && <AddGroupPopup onAddGroup={handleAddGroup} ref={popupRef} />}
-      </div>
-    );
-  }
 
   return (
     
